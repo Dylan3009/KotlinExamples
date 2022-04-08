@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.melendez.navigation.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/default_gap"
+        tools:context=".NameFragment">
+
+        <EditText
+            android:id="@+id/last_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.lastName}"
+            android:hint="@string/hint_lastname" />
+
+        <Button
+            android:id="@+id/action_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/medium_gap"
+            android:text="@string/action_next" />
+    </LinearLayout>
+</layout>
